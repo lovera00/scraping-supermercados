@@ -29,8 +29,11 @@ def setup_webdriver():
 
 def main():
     driver = setup_webdriver()
+    lista_urls = ["https://www.stock.com.py/default.aspx", "https://www.superseis.com.py/default.aspx", "https://www.casarica.com.py/","https://www.arete.com.py/","https://www.realonline.com.py/","https://losjardinesonline.com.py/","https://supermas.com.py/","https://supermercadolabomba.com/index.php?class=Inicio"]
 
-    driver.get("https://www.google.com")
+    for url in lista_urls:
+        driver.get(url)
+        time.sleep(5)
     time.sleep(60)
     driver.quit()
 
